@@ -1,10 +1,12 @@
+// import Playground from "@/components/Playground";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-white">
+    <main className="min-h-screen bg-gradient-to-b from-white to-gray-200 text-white">
+      {/* <Playground /> */}
       <Navbar />
       <Hero />
       <About />

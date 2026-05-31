@@ -1,10 +1,10 @@
 export default function About() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-28">
+    <section className="max-w-7xl mx-auto px-8 py-28">
 
       <div className="mb-14">
 
-        <p className="text-[#3B82F6] font-semibold uppercase tracking-[0.2em] mb-4">
+        <p className="text-[#000000] font-extrabold uppercase tracking-[0.2em] mb-4">
           About Me
         </p>
 
@@ -84,3 +84,4 @@ export default function About() {
     </section>
   );
 }
+
