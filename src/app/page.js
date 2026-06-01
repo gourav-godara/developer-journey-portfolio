@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import FeaturedWork from "@/components/FeaturedWork";
 
 export default function Home() {
   return (
