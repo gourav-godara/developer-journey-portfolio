@@ -36,10 +36,10 @@ export default function About() {
 
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-[140px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
-            <h3 className="text-3xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
+          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-35 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <h3 className="text-2xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
               Building
             </h3>
 
@@ -48,8 +48,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-[140px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
-            <h3 className="text-3xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
+          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-35 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <h3 className="text-2xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
               Problem Solving
             </h3>
 
@@ -58,8 +58,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-[140px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
-            <h3 className="text-3xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
+          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-35 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <h3 className="text-2xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
               Learning
             </h3>
 
@@ -68,8 +68,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-[140px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
-            <h3 className="text-3xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
+          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-35 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <h3 className="text-2xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
               Open Source
             </h3>
 
@@ -78,8 +78,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-[140px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
-            <h3 className="text-3xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
+          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-35 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <h3 className="text-2xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
               Achievements
             </h3>
 
@@ -88,8 +88,8 @@ export default function About() {
             </p>
           </div>
 
-          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-[140px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
-            <h3 className="text-3xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
+          <div className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 min-h-35 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <h3 className="text-2xl font-bold text-[#111827] mb-2 transition-all duration-300 group-hover:translate-x-1">
               Growth
             </h3>
 

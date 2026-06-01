@@ -6,11 +6,12 @@ import FeaturedWork from "@/components/FeaturedWork";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-200 text-white">
+    <main className="min-h-screen bg-linear-to-b from-white to-gray-300 text-white">
       {/* <Playground /> */}
       <Navbar />
       <Hero />
       <About />
+      <FeaturedWork/>
     </main>
   );
 }
