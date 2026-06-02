@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import FeaturedWork from "@/components/FeaturedWork";
+import Academics from "@/components/Academics"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <FeaturedWork/>
+      <Academics/>
     </main>
   );
 }
