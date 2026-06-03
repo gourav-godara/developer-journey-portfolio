@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section className="max-w-7xl mx-auto px-8 py-28">
 
-      <div className="mb-20">
+      <div className="mb-10">
 
         <h2 className="text-4xl md:text-5xl text-[#000000] font-extrabold mb-4 leading-tight">
           About Me

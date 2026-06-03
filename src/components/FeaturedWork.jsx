@@ -4,7 +4,7 @@ export default function FeaturedWork() {
     return (
         <section className="max-w-7xl mx-auto px-8 py-28">
 
-            <div className="flex items-center justify-between mb-20">
+            <div className="flex items-center justify-between mb-10">
 
                 <h2 className="text-3xl md:text-5xl text-[#111827] font-extrabold leading-tight">
                     Featured Work
@@ -20,7 +20,7 @@ export default function FeaturedWork() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                 <Link href="/featured-work/portfolio-website">
-                    <div className="group bg-white p-8 rounded-3xl border border-gray-200 min-h-80 hover:-translate-y-2 hover:shadow-xl hover:border-purple-200 transition-all duration-300 cursor-pointer">
+                    <div className="group bg-white p-8 rounded-3xl border border-gray-200 min-h-80 hover:-translate-y-2 hover:shadow-xl hover:border-2 hover:border-purple-300 transition-all duration-300 cursor-pointer">
 
                         <div className="flex justify-between items-start mb-6">
 
@@ -69,7 +69,7 @@ export default function FeaturedWork() {
                 </Link>
                 
 
-                <div className="group bg-white p-8 rounded-3xl border border-gray-200 min-h-80 hover:-translate-y-2 hover:shadow-xl hover:border-purple-200 transition-all duration-300 cursor-pointer">
+                <div className="group bg-white p-8 rounded-3xl border border-gray-200 min-h-80 hover:-translate-y-2 hover:shadow-xl hover:border-2 hover:border-purple-300 transition-all duration-300 cursor-pointer">
 
                     <div className="flex justify-between items-start mb-6">
 
@@ -115,7 +115,7 @@ export default function FeaturedWork() {
                     </div>
                 </div>
 
-                <div className="group bg-white p-8 rounded-3xl border border-gray-200 min-h-100 hover:-translate-y-2 hover:shadow-xl hover:border-amber-200 transition-all duration-300 cursor-pointer">
+                <div className="group bg-white p-8 rounded-3xl border border-gray-200 min-h-100 hover:-translate-y-2 hover:shadow-xl hover:border-2 hover:border-amber-300 transition-all duration-300 cursor-pointer">
                     
                     <div className="flex justify-between items-start mb-6">
 
