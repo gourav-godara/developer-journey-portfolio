@@ -1,6 +1,11 @@
 export default function About() {
   return (
     <section className="max-w-7xl mx-auto px-8 py-28">
+      {/* Premium Divider */}
+      <div className="relative mb-20">
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+        <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 rounded-full bg-white border-2 border-gray-300"></div>
+      </div>
 
       <div className="mb-10">
 
@@ -20,8 +25,8 @@ export default function About() {
           </p>
 
           <p className="text-[#6B7280] text-lg leading-relaxed mb-6">
-          Passionate about technology, problem solving, and building impactful digital experiences.
-        </p>
+            Passionate about technology, problem solving, and building impactful digital experiences.
+          </p>
 
           <p className="text-[#6B7280] text-lg leading-relaxed mb-6">
             Currently building projects, improving problem-solving skills in C++,
@@ -32,7 +37,7 @@ export default function About() {
             My goal is to continuously learn, build scalable systems,
             and grow into a strong software engineer capable of solving challenging problems.
           </p>
-          
+
 
         </div>
 
@@ -74,7 +79,7 @@ export default function About() {
             </h3>
 
             <p className="text-[#6B7280]">
-              GitHub | Contributions | Hacktoberfest | Community Work
+              GitHub | Contributions | Community Work
             </p>
           </div>
 
