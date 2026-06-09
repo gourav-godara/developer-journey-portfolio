@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="mt-32">
+        <footer className="mt-32 bg-white">
 
             {/* Full Width Footer Divider */}
-            <div className="relative w-screen left-1/2 -translate-x-1/2 mb-5">
+            <div className="relative w-screen left-1/2 -translate-x-1/2 mb-10">
 
                 <div className="h-[2px] bg-gradient-to-r
                     from-transparent
@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-8">
 
                 {/* Footer Content */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-8">
 
                     {/* Brand */}
                     <div className="text-center md:text-left">
@@ -42,11 +42,9 @@ export default function Footer() {
 
                     {/* Copyright */}
                     <div className="text-center">
-
-                        <p className="text-[#6B7280] text-sm">
-                            © 2026 Designed & Built by Gourav Godara | All rights reserved | Privacy Policy
+                        <p className="text-[#9CA3AF] text-sm">
+                            © 2026 Designed & Built by Gourav Godara. All rights reserved.
                         </p>
-
                     </div>
 
                 </div>

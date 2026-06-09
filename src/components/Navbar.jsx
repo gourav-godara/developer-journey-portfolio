@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <nav className="w-[92%] mx-auto mt-4 px-8 py-4 flex items-center justify-between rounded-3xl bg-white border border-gray-200 shadow-md">
@@ -21,7 +23,9 @@ export default function Navbar() {
         </li>
 
         <li className="text-xl hover:text-[#111827] transition duration-300 cursor-pointer">
-          Contact
+          <Link href="/contact">
+            Contact
+          </Link>
         </li>
 
       </ul>

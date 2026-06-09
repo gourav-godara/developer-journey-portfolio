@@ -3,8 +3,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import FeaturedWork from "@/components/FeaturedWork";
-import Academics from "@/components/Academics"
-import Footer from "@/components/Footer"
+import Academics from "@/components/Academics";
+import ContactCTA from "@/components/ContactCTA";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <FeaturedWork/>
       <Academics/>
+      <ContactCTA/>
       <Footer/>
     </main>
   );
