@@ -2,238 +2,189 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function ClubsActivities() {
-    return (
-        <main className="min-h-screen bg-linear-to-b from-white to-gray-200 text-white">
+  return (
+    <main className="min-h-screen bg-[#0F0F0F] text-white">
+      <Navbar />
 
-            <Navbar />
+      <section className="relative max-w-7xl mx-auto px-8 py-20 overflow-hidden">
 
-            <section className="relative max-w-7xl mx-auto px-8 py-28 overflow-hidden">
+        {/* Hero */}
+        <div className="mb-24">
+          <p className="uppercase tracking-[0.35em] text-amber-400 font-semibold text-sm mb-5">
+            Communities & Growth
+          </p>
 
-                {/* Hero */}
-                <div className="mb-28">
+          <h1 className="text-6xl md:text-8xl font-black text-white leading-none tracking-tight mb-8">
+            Clubs & <span className="text-amber-400">Activities</span>
+          </h1>
 
-                    <p className="uppercase tracking-[0.3em] text-blue-500 font-semibold mb-4">
-                        Communities & Growth
-                    </p>
+          <p className="text-lg text-[#6B7280] max-w-2xl leading-relaxed">
+            Technical communities, student organizations, workshops,
+            hackathons and experiences that continue shaping my growth
+            beyond academics.
+          </p>
+        </div>
 
-                    <h1 className="text-5xl md:text-7xl font-black text-[#111827] mb-6 tracking-tight">
-                        Clubs & Activities
-                    </h1>
+        {/* ── Club Cards ── */}
+        <div className="space-y-6 mb-28">
 
-                    <p className="text-lg text-[#6B7280] max-w-3xl leading-relaxed">
-                        Technical communities, student organizations, workshops,
-                        hackathons and experiences that continue shaping my growth
-                        beyond academics.
-                    </p>
+          {/* Nexus */}
+          <div className="group relative bg-[#161616] border border-[#2A2A2A] rounded-3xl p-8 md:p-10 overflow-hidden
+                          hover:border-blue-500/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.06)] transition-all duration-400">
 
-                </div>
+            {/* Background number watermark */}
+            <div className="absolute right-6 top-4 text-[120px] md:text-[160px] font-black text-white/[0.025] select-none leading-none pointer-events-none">
+              01
+            </div>
 
-                {/* ================================================= */}
-                {/* Nexus */}
-                {/* ================================================= */}
+            <div className="relative z-10 flex flex-col md:flex-row gap-8">
 
-                <div className="relative pb-20">
+              {/* Logo */}
+              <div className="w-20 h-20 rounded-2xl bg-[#1C1C1C] border border-[#2A2A2A] overflow-hidden shrink-0 shadow-lg">
+                <Image
+                  src="/nexus.jpeg"
+                  alt="Nexus Logo"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-                    {/* Background Number */}
-                    <div className="absolute right-0 top-0 text-[120px] md:text-[180px] font-black text-black/[0.03] select-none">
-                        01
-                    </div>
-
-                    <div className="flex gap-8">
-
-                        {/* Logo */}
-                        <div className="w-24 h-24 rounded-3xl bg-white border-4 border-gray-300 shadow-xl overflow-hidden shrink-0">
-                            <Image
-                                src="/nexus.jpeg"
-                                alt="Nexus Logo"
-                                width={96}
-                                height={96}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-
-                        {/* Content */}
-                        <div className="flex-1">
-
-                            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
-
-                                <div>
-
-                                    <h2 className="text-4xl font-bold text-[#111827] mb-2">
-                                        Nexus
-                                    </h2>
-
-                                    <p className="text-blue-500 font-medium mb-6">
-                                        Technical Club
-                                    </p>
-
-                                    <p className="text-[#4B5563] max-w-3xl leading-relaxed">
-                                        Participating in coding sessions, technical
-                                        workshops, networking events and collaborative
-                                        learning opportunities with fellow developers.
-                                    </p>
-
-                                </div>
-
-                                <div className="flex flex-col gap-3">
-
-                                    <span className="w-32 inline-flex items-center justify-center px-4 py-2 rounded-full border border-blue-300 bg-blue-100 text-blue-600 font-semibold text-sm">
-                                        Member
-                                    </span>
-
-                                    <span className="px-4 py-2 rounded-full bg-gray-100 text-gray-600 text-sm font-medium">
-                                        2025 - Present
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                            {/* Skills */}
-                            <div className="flex flex-wrap gap-3 mt-8">
-
-                                <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-[#6B7280]">
-                                    Coding
-                                </span>
-
-                                <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-[#6B7280]">
-                                    Workshops
-                                </span>
-
-                                <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-[#6B7280]">
-                                    Community
-                                </span>
-
-                            </div>
-
-                            {/* Divider */}
-                            <div className="mt-12 h-[3px] w-full bg-gradient-to-r from-transparent via-blue-500/80 to-transparent rounded-full shadow-[0_0_20px_rgba(59,130,246,0.35)]"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                {/* ================================================= */}
-                {/* Wellness Club */}
-                {/* ================================================= */}
-
-                <div className="relative pb-20">
-
-                    {/* Background Number */}
-                    <div className="absolute right-0 top-0 text-[120px] md:text-[180px] font-black text-black/[0.03] select-none">
-                        02
-                    </div>
-
-                    <div className="flex gap-8">
-
-                        {/* Logo */}
-                        <div className="w-24 h-24 rounded-3xl bg-white border-4  border-gray-300 shadow-xl overflow-hidden shrink-0">
-                            <Image
-                                src="/wellness.jpeg"
-                                alt="Wellness Club Logo"
-                                width={96}
-                                height={96}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-
-                        {/* Content */}
-                        <div className="flex-1">
-
-                            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
-
-                                <div>
-
-                                    <h2 className="text-4xl font-bold text-[#111827] mb-2">
-                                        Wellness Club
-                                    </h2>
-
-                                    <p className="text-green-500 font-medium mb-6">
-                                        Community Club
-                                    </p>
-
-                                    <p className="text-[#4B5563] max-w-3xl leading-relaxed">
-                                        Engaging in community initiatives, wellness
-                                        programs and activities focused on personal
-                                        growth, teamwork and student development.
-                                    </p>
-
-                                </div>
-
-                                <div className="flex flex-col gap-3">
-
-                                    <span className="w-32 inline-flex items-center justify-center px-4 py-2 rounded-full border border-green-300 bg-green-100 text-green-600 font-semibold text-sm">
-                                        Member
-                                    </span>
-
-                                    <span className="px-4 py-2 rounded-full bg-gray-100 text-gray-600 text-sm font-medium">
-                                        2025 - Present
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                            {/* Skills */}
-                            <div className="flex flex-wrap gap-3 mt-8">
-
-                                <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-[#6B7280]">
-                                    Leadership
-                                </span>
-
-                                <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-[#6B7280]">
-                                    Teamwork
-                                </span>
-
-                                <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-[#6B7280]">
-                                    Community
-                                </span>
-
-                            </div>
-
-                            {/* Divider */}
-                            <div className="mt-12 h-[3px] w-full bg-gradient-to-r from-transparent via-green-500/80 to-transparent rounded-full shadow-[0_0_20px_rgba(34,197,94,0.35)]"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                {/* Growth Section */}
-
-                <div className="mt-28">
-
-                    <h2 className="text-4xl font-bold text-[#111827] mb-10">
-                        What I'm Building Through These Experiences
+              {/* Content */}
+              <div className="flex-1">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-black text-white mb-1 group-hover:text-blue-400 transition-colors duration-300">
+                      Nexus
                     </h2>
+                    <p className="text-blue-400 font-medium text-sm uppercase tracking-widest">
+                      Technical Club
+                    </p>
+                  </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-                        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm text-center text-[#111827] font-medium">
-                            Teamwork
-                        </div>
-
-                        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm text-center text-[#111827] font-medium">
-                            Leadership
-                        </div>
-
-                        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm text-center text-[#111827] font-medium">
-                            Networking
-                        </div>
-
-                        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm text-center text-[#111827] font-medium">
-                            Communication
-                        </div>
-
-                    </div>
-
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 font-semibold text-xs">
+                      Member
+                    </span>
+                    <span className="px-4 py-1.5 rounded-full bg-[#1C1C1C] border border-[#2A2A2A] text-[#6B7280] text-xs font-medium">
+                      2025 — Present
+                    </span>
+                  </div>
                 </div>
 
-            </section>
+                <p className="text-[#6B7280] leading-relaxed mb-7 max-w-2xl">
+                  Participating in coding sessions, technical workshops, networking events
+                  and collaborative learning opportunities with fellow developers.
+                </p>
 
-        </main>
-    );
+                <div className="flex flex-wrap gap-2">
+                  {["Coding", "Workshops", "Community"].map((tag) => (
+                    <span key={tag} className="px-4 py-1.5 rounded-full bg-[#1C1C1C] border border-[#2A2A2A] text-[#9CA3AF] text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom accent line */}
+            <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"></div>
+          </div>
+
+          {/* Wellness Club */}
+          <div className="group relative bg-[#161616] border border-[#2A2A2A] rounded-3xl p-8 md:p-10 overflow-hidden
+                          hover:border-emerald-500/40 hover:shadow-[0_0_40px_rgba(16,185,129,0.06)] transition-all duration-400">
+
+            <div className="absolute right-6 top-4 text-[120px] md:text-[160px] font-black text-white/[0.025] select-none leading-none pointer-events-none">
+              02
+            </div>
+
+            <div className="relative z-10 flex flex-col md:flex-row gap-8">
+
+              {/* Logo */}
+              <div className="w-20 h-20 rounded-2xl bg-[#1C1C1C] border border-[#2A2A2A] overflow-hidden shrink-0 shadow-lg">
+                <Image
+                  src="/wellness.jpeg"
+                  alt="Wellness Club Logo"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-black text-white mb-1 group-hover:text-emerald-400 transition-colors duration-300">
+                      Wellness Club
+                    </h2>
+                    <p className="text-emerald-400 font-medium text-sm uppercase tracking-widest">
+                      Community Club
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-semibold text-xs">
+                      Member
+                    </span>
+                    <span className="px-4 py-1.5 rounded-full bg-[#1C1C1C] border border-[#2A2A2A] text-[#6B7280] text-xs font-medium">
+                      2025 — Present
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-[#6B7280] leading-relaxed mb-7 max-w-2xl">
+                  Engaging in community initiatives, wellness programs and activities
+                  focused on personal growth, teamwork and student development.
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {["Leadership", "Teamwork", "Community"].map((tag) => (
+                    <span key={tag} className="px-4 py-1.5 rounded-full bg-[#1C1C1C] border border-[#2A2A2A] text-[#9CA3AF] text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent"></div>
+          </div>
+        </div>
+
+        {/* ── Growth Skills Section ── */}
+        <div>
+          <p className="uppercase tracking-[0.3em] text-[#6B7280] font-semibold text-xs mb-4">
+            Building Through Experiences
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-10">
+            What I'm <span className="text-amber-400">Growing</span>
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { skill: "Teamwork", icon: "🤝" },
+              { skill: "Leadership", icon: "⚡" },
+              { skill: "Networking", icon: "🌐" },
+              { skill: "Communication", icon: "💬" },
+            ].map(({ skill, icon }) => (
+              <div
+                key={skill}
+                className="group bg-[#161616] border border-[#2A2A2A] rounded-2xl p-6 text-center
+                           hover:border-amber-500/40 hover:shadow-[0_0_20px_rgba(245,166,35,0.06)]
+                           transition-all duration-300 cursor-default"
+              >
+                <div className="text-3xl mb-3">{icon}</div>
+                <p className="text-white font-semibold group-hover:text-amber-400 transition-colors duration-300">
+                  {skill}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </section>
+    </main>
+  );
 }

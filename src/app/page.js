@@ -1,4 +1,3 @@
-// import Playground from "@/components/Playground";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -10,16 +9,15 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-white to-gray-300 text-white">
-      {/* <Playground /> */}
+    <main className="min-h-screen bg-[#0F0F0F] text-white">
       <Navbar />
       <Hero />
       <About />
-      <FeaturedWork/>
-      <CertificatesPreview/>
-      <Academics/>
-      <ContactCTA/>
-      <Footer/>
+      <FeaturedWork />
+      <CertificatesPreview />
+      <Academics />
+      <ContactCTA />
+      <Footer />
     </main>
   );
 }

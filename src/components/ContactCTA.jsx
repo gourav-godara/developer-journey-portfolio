@@ -6,56 +6,31 @@ export default function ContactCTA() {
 
             {/* Premium Divider */}
             <div className="relative mb-30">
-                <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
-                <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 rounded-full bg-white border-2 border-gray-300"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"></div>
+                <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 rounded-full bg-[#0F0F0F] border-2 border-amber-500/60"></div>
             </div>
 
-            <div
-                className="
-                relative overflow-hidden
-                rounded-[40px]
-                bg-white
-                border border-gray-200
-                shadow-[0_30px_80px_rgba(0,0,0,0.08)]
-                p-12 md:p-20
-                text-center
-            "
-            >
+            <div className="relative overflow-hidden rounded-[40px] bg-[#161616] border border-[#2A2A2A] p-12 md:p-20 text-center">
 
-                {/* Background Word */}
-                <div
-                    className="
-                    absolute inset-0
-                    flex items-center justify-center
-                    pointer-events-none
-                    select-none
-                "
-                >
-                    <span
-                        className="
-                        text-[120px]
-                        md:text-[220px]
-                        font-black
-                        text-gray-100
-                        leading-none
-                    "
-                    >
+                {/* Background word watermark */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+                    <span className="text-[120px] md:text-[220px] font-black text-white/[0.03] leading-none">
                         CONNECT
                     </span>
                 </div>
 
-                {/* Accent Glow */}
-                <div className="absolute -top-24 -left-24 w-72 h-72 bg-red-100 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-100 rounded-full blur-3xl"></div>
+                {/* Amber glow top-left, purple glow bottom-right */}
+                <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber-500 rounded-full blur-3xl opacity-[0.06] pointer-events-none"></div>
+                <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-[0.07] pointer-events-none"></div>
 
                 {/* Content */}
                 <div className="relative z-10">
 
-                    <p className="text-red-500 uppercase tracking-[0.35em] font-semibold mb-6">
+                    <p className="text-amber-400 uppercase tracking-[0.35em] font-semibold mb-6 text-sm">
                         CONTACT
                     </p>
 
-                    <h2 className="text-[#111827] text-5xl md:text-7xl font-black mb-6">
+                    <h2 className="text-white text-5xl md:text-7xl font-black mb-6">
                         Let's Connect
                     </h2>
 
@@ -67,16 +42,7 @@ export default function ContactCTA() {
 
                     <Link
                         href="/contact"
-                        className="
-                        inline-flex items-center gap-3
-                        px-8 py-4
-                        rounded-2xl
-                        bg-[#111827]
-                        text-white
-                        font-bold
-                        hover:scale-105
-                        transition-all duration-300
-                        shadow-lg"
+                        className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-amber-500 text-[#0F0F0F] font-bold hover:bg-amber-400 hover:scale-105 transition-all duration-300 shadow-lg shadow-amber-500/20"
                     >
                         Open Channel →
                     </Link>
