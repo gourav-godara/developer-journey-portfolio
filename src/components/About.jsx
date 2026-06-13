@@ -51,8 +51,8 @@ export default function About() {
             <div
               key={card.title}
               className="group bg-[#1C1C1C] p-6 rounded-2xl border border-[#2A2A2A] min-h-35
-                         hover:-translate-y-1 hover:border-amber-500/50 hover:shadow-[0_0_20px_rgba(245,166,35,0.08)]
-                         transition-all duration-300 cursor-pointer"
+             hover:-translate-y-1 hover:border-amber-500/50 hover:shadow-[0_0_20px_rgba(245,166,35,0.08)]
+             transition-all duration-300 cursor-pointer"
             >
               <h3 className="text-xl font-bold text-white mb-2 transition-all duration-300 group-hover:text-amber-400 group-hover:translate-x-1">
                 {card.title}

@@ -48,29 +48,11 @@ export default function CertificatesPreview() {
 
                         {/* Right */}
                         <div className="flex flex-col items-start md:items-end justify-center">
-                            <div className="relative">
-
-                                {/* Stacked cert cards */}
-                                <div className="absolute -top-3 -right-3 w-48 h-28 bg-[#1A1A1A] border border-white/5 rounded-2xl rotate-6 opacity-40"></div>
-                                <div className="absolute -top-1.5 -right-1.5 w-48 h-28 bg-[#1A1A1A] border border-white/5 rounded-2xl rotate-3 opacity-70"></div>
-
-                                {/* Front card */}
-                                <div className="relative w-48 h-28 bg-[#1F1F1F] border border-amber-500/20 rounded-2xl p-4 shadow-xl">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <div className="w-6 h-6 rounded-md bg-amber-500/20 flex items-center justify-center">
-                                            <span className="text-amber-400 text-xs">✦</span>
-                                        </div>
-                                        <span className="text-xs text-zinc-500 uppercase tracking-widest">Certified</span>
-                                    </div>
-                                    <p className="text-white font-bold text-sm leading-tight">Gourav Godara</p>
-                                    <p className="text-zinc-500 text-xs mt-1">SVNIT Surat · CSE</p>
-                                    <div className="absolute bottom-3 right-4 flex gap-1">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400/50"></span>
-                                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400/20"></span>
-                                    </div>
-                                </div>
-
+                            <div className="text-right">
+                                <h4 className="text-6xl md:text-7xl font-black text-white">
+                                    <span className="text-amber-300">2</span>
+                                </h4>
+                                <p className="text-[#6B7280] text-lg mt-2">Certifications Earned</p>
                             </div>
 
                             <div className="mt-10 inline-flex items-center gap-3 text-lg font-semibold text-[#9CA3AF] group-hover:text-amber-400 transition-all duration-300">

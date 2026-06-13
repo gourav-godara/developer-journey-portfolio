@@ -14,7 +14,7 @@ export default function ContactCTA() {
 
                 {/* Background word watermark */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-                    <span className="text-[120px] md:text-[220px] font-black text-white/[0.03] leading-none">
+                    <span className="text-[120px] md:text-[220px] font-black text-white/[0.02] leading-none">
                         CONNECT
                     </span>
                 </div>
@@ -44,7 +44,7 @@ export default function ContactCTA() {
                         href="/contact"
                         className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-amber-500 text-[#0F0F0F] font-bold hover:bg-amber-400 hover:scale-105 transition-all duration-300 shadow-lg shadow-amber-500/20"
                     >
-                        Open Channel →
+                        Let's Talk →
                     </Link>
 
                 </div>

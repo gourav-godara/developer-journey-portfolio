@@ -16,7 +16,7 @@ const skills = [
 const lines = [
   { text: "const gourav = {", indent: 0, color: "#9CA3AF" },
   { text: 'role: "CSE Student",', indent: 1, color: "#F5A623" },
-  { text: 'focus: "DSA + WebDev",', indent: 1, color: "#F5A623" },
+  { text: 'focus: "DSA + WebDev + AI",', indent: 1, color: "#F5A623" },
   { text: 'college: "SVNIT Surat",', indent: 1, color: "#F5A623" },
   { text: "passion: [", indent: 1, color: "#9CA3AF" },
   { text: '"Problem Solving",', indent: 2, color: "#86EFAC" },

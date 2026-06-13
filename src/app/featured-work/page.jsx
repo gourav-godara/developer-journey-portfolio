@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function FeaturedWorkPage() {
   return (
@@ -65,13 +66,21 @@ export default function FeaturedWorkPage() {
 
             <div className="flex justify-between items-start mb-6">
               <div className="inline-flex px-4 py-2 rounded-full bg-purple-500/10 text-purple-400 font-semibold text-sm border border-purple-500/20">
-                Project
+                In Progress
               </div>
-              <div className="size-16 rounded-xl bg-[#2A2A2A]"></div>
+              <div className="size-16 rounded-xl bg-[#2A2A2A] flex items-center justify-center text-2xl">
+                ⚡
+              </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400"></h3>
-            <p className="text-[#6B7280] leading-relaxed mb-6"></p>
+            <h3 className="text-2xl font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400">
+              Currently Building
+            </h3>
+            <p className="text-[#6B7280] leading-relaxed mb-6">
+              Working on new projects focused on software engineering,
+              full stack development, and real world problem solving.
+              More projects will be added soon.
+            </p>
 
             <div className="flex flex-wrap gap-2 mb-auto">
               <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]"></span>
@@ -79,8 +88,8 @@ export default function FeaturedWorkPage() {
             </div>
 
             <div className="flex justify-end pt-8">
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] transition-all duration-300 group-hover:text-amber-400">
-                Explore <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280]">
+                Coming Soon
               </span>
             </div>
           </div>
@@ -93,13 +102,21 @@ export default function FeaturedWorkPage() {
 
               <div className="flex justify-between items-start mb-6">
                 <div className="inline-flex px-4 py-2 rounded-full bg-amber-500/10 text-amber-400 font-semibold text-sm border border-amber-500/20">
-                  Hackathon
+                  Upcoming
                 </div>
-                <div className="size-16 rounded-xl bg-[#2A2A2A]"></div>
+                <div className="size-16 rounded-xl bg-[#2A2A2A] flex items-center justify-center text-2xl">
+                  🏆
+                </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400"></h3>
-              <p className="text-[#6B7280] leading-relaxed mb-6"></p>
+              <h3 className="text-2xl font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400">
+                Hackathons & Competitions
+              </h3>
+              <p className="text-[#6B7280] leading-relaxed mb-6">
+                Preparing for hackathons, coding contests, and collaborative
+                engineering challenges to build practical experience and
+                strengthen problem solving skills.
+              </p>
 
               <div className="flex flex-wrap gap-2 mb-auto">
                 <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]"></span>
@@ -107,8 +124,8 @@ export default function FeaturedWorkPage() {
               </div>
 
               <div className="flex justify-end pt-8">
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280] transition-all duration-300 group-hover:text-amber-400">
-                  Explore <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                <span className="inline-flex items-center gap-2 text-sm font-medium text-[#6B7280]">
+                  Updates Coming Soon
                 </span>
               </div>
             </div>
@@ -116,6 +133,8 @@ export default function FeaturedWorkPage() {
 
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function PortfolioWebsitePage() {
   return (
@@ -24,7 +25,7 @@ export default function PortfolioWebsitePage() {
               Project
             </span>
             <span className="px-4 py-1.5 rounded-full bg-[#1C1C1C] border border-[#2A2A2A] text-[#6B7280] text-sm">
-              2025 — Present
+              2026 — Present
             </span>
             <span className="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium">
               Live ↗
@@ -69,8 +70,8 @@ export default function PortfolioWebsitePage() {
           <div className="md:col-span-2 grid grid-cols-3 gap-4">
             {[
               { num: "100%", label: "Responsive" },
-              { num: "A+", label: "Lighthouse Score" },
-              { num: "2025", label: "Launched" },
+              { num: "Dark", label: "Craft UI" },
+              { num: "2026", label: "Launched" },
             ].map(({ num, label }) => (
               <div key={label} className="bg-[#161616] border border-[#2A2A2A] rounded-2xl p-6 flex flex-col justify-between">
                 <p className="text-4xl font-black text-white">{num}</p>
@@ -139,6 +140,8 @@ export default function PortfolioWebsitePage() {
         </div>
 
       </section>
+
+      <Footer />
     </main>
   );
 }
