@@ -4,6 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { X, Menu } from "lucide-react";
 
+const navItems = [
+  { label: "Projects", href: "/featured-work" },
+  { label: "Education", href: "/academics/education" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "Contact", href: "/contact" },
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,24 +18,19 @@ export default function Navbar() {
     <>
       <nav className="w-[92%] mx-auto mt-4 px-8 py-4 flex items-center justify-between rounded-3xl bg-[#161616] border border-[#2A2A2A] shadow-lg shadow-black/40 relative z-50">
 
-        <h1 className="text-2xl font-bold text-white font-sans tracking-tight">
-          Gourav <span className="text-amber-400">G.</span>
-        </h1>
+        <Link href="/">
+          <h1 className="text-2xl font-bold text-white font-sans tracking-tight cursor-pointer hover:opacity-80 transition-opacity duration-200">
+            Gourav <span className="text-amber-400">G.</span>
+          </h1>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-8 text-base font-medium text-[#9CA3AF]">
-          <li className="text-xl hover:text-amber-400 transition duration-300 cursor-pointer">
-            <Link href="/about">About</Link>
-          </li>
-          <li className="text-xl hover:text-amber-400 transition duration-300 cursor-pointer">
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li className="text-xl hover:text-amber-400 transition duration-300 cursor-pointer">
-            <Link href="/certifications">Certificate</Link>
-          </li>
-          <li className="text-xl hover:text-amber-400 transition duration-300 cursor-pointer">
-            <Link href="/contact">Contact</Link>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.label} className="text-xl hover:text-amber-400 transition duration-300 cursor-pointer">
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Hamburger */}
@@ -49,12 +51,7 @@ export default function Navbar() {
         }`}
       >
         <ul className="bg-[#161616] border border-[#2A2A2A] rounded-2xl px-4 py-3 flex flex-col shadow-lg shadow-black/40">
-          {[
-            { label: "About", href: "/about" },
-            { label: "Projects", href: "/projects" },
-            { label: "Certificate", href: "/certifications" },
-            { label: "Contact", href: "/contact" },
-          ].map((item, i) => (
+          {navItems.map((item, i) => (
             <li key={item.label}>
               <Link
                 href={item.href}
@@ -64,7 +61,7 @@ export default function Navbar() {
                 {item.label}
                 <span className="text-zinc-600 text-sm">→</span>
               </Link>
-              {i < 3 && <div className="h-px bg-white/5 mx-4" />}
+              {i < navItems.length - 1 && <div className="h-px bg-white/5 mx-4" />}
             </li>
           ))}
         </ul>
