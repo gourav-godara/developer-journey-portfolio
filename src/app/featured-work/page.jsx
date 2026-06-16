@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -101,10 +102,16 @@ export default function FeaturedWorkPage() {
                   Project
                 </motion.div>
                 <motion.div
-                  className="size-14 sm:size-16 rounded-xl bg-[#2A2A2A]"
-                  whileHover={{ rotate: 8, scale: 1.05 }}
+                  className="relative size-14 sm:size-16 rounded-xl overflow-hidden border border-[#333]"
                   transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                />
+                >
+                  <Image
+                    src="/portfolio-logo.jpeg"
+                    alt="Portfolio Website"
+                    fill
+                    className="object-cover"
+                  />
+                </motion.div>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400">

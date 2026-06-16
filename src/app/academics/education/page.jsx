@@ -22,7 +22,7 @@ const credentials = [
     description:
       "Pursuing Computer Science & Engineering with focus on Data Structures & Algorithms, Web Development, Open Source and Competitive Programming.",
     bullets: null,
-    stat: "8.0",
+    stat: "7.77",
     statLabel: "CGPA",
   },
   {
@@ -118,7 +118,7 @@ export default function Education() {
               className="flex gap-6 pb-2"
             >
               <div className="text-left md:text-right">
-                <p className="text-3xl sm:text-4xl font-black text-white">8.0</p>
+                <p className="text-3xl sm:text-4xl font-black text-white">7.77</p>
                 <p className="text-[10px] sm:text-xs text-[#6B7280] uppercase tracking-widest mt-1">Current CGPA</p>
               </div>
               <div className="w-px bg-[#2A2A2A]"></div>
@@ -147,18 +147,25 @@ export default function Education() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <span className="text-[48px] sm:text-[72px] md:text-[100px] font-black text-white/[0.025] leading-none tracking-tight whitespace-nowrap">
+            <span className="text-[48px] sm:text-[72px] md:text-[100px] mb-15 font-black text-white/[0.025] leading-none tracking-tight whitespace-nowrap">
               2020 — 2025
             </span>
           </div>
 
           <div className="relative flex items-center gap-0 py-8">
-            <div className="absolute left-0 right-0 h-px bg-[#2A2A2A]"></div>
+            {/* Base line */}
+            <div className="absolute left-0 right-0 top-[10px] h-px bg-[#2A2A2A]"></div>
+
+            {/* Animated amber progress line */}
             <motion.div
-              className="absolute left-0 h-px bg-gradient-to-r from-amber-500/80 to-amber-500/20"
+              className="absolute left-0 top-[10px] h-px bg-gradient-to-r from-amber-500/80 to-amber-500/20"
               initial={{ width: 0 }}
-              animate={{ width: "85%" }}
-              transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
+              animate={{ width: "86%" }}
+              transition={{
+                duration: 1.2,
+                delay: 0.7,
+                ease: "easeOut",
+              }}
             ></motion.div>
 
             {nodes.map((node, i) => (

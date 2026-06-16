@@ -22,33 +22,34 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-14 items-start">
         <div className="max-w-lg">
           <p className="text-[#9CA3AF] text-lg leading-relaxed mb-6">
-            I'm Gourav, a Computer Science student focused on software engineering,
-            data structures & algorithms, and modern web development.
+            I'm Gourav Godara, a Computer Science student at SVNIT Surat with a strong interest
+            in software engineering, problem solving, and building digital products.
           </p>
 
           <p className="text-[#9CA3AF] text-lg leading-relaxed mb-6">
-            Passionate about technology, problem solving, and building impactful digital experiences.
+            Every project, coding challenge, and new technology I explore is part of a long-term
+            goal to become a skilled engineer capable of building impactful products.
           </p>
 
           <p className="text-[#9CA3AF] text-lg leading-relaxed mb-6">
-            Currently building projects, improving problem-solving skills in C++,
-            and exploring how technology can create meaningful real-world impact.
+            Currently, I focus on Data Structures & Algorithms, full stack web development, and
+            creating projects that strengthen both technical and practical problem-solving skills.
           </p>
 
           <p className="text-[#9CA3AF] text-lg leading-relaxed">
-            My goal is to continuously learn, build scalable systems,
-            and grow into a strong software engineer capable of solving challenging problems.
+            Beyond academics, I'm interested in startups, open source, hackathons,
+            and continuously learning technologies that can create real world impact.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {[
-            { title: "Building", desc: "Projects | Portfolio | Future Products" },
-            { title: "Problem Solving", desc: "DSA | LeetCode | Codeforces | Competitive Programming" },
-            { title: "Learning", desc: "Courses | Certificates | Books | New Technologies" },
-            { title: "Open Source", desc: "GitHub | Contributions | Community Work" },
-            { title: "Achievements", desc: "Hackathons | Contest Results | Awards | Milestones" },
-            { title: "Growth", desc: "Journey | Consistency | Goals | Progress" },
+            {title: "Education", desc: "B.Tech CSE at SVNIT Surat"},
+            {title: "Competitive Exams", desc: "99.14%ile JEE Mains • JEE Advanced Qualified"},
+            {title: "DSA Journey", desc: "C++ • LeetCode • Problem Solving"},
+            {title: "Web Development", desc: "Next.js • React • Tailwind CSS"},
+            {title: "Hackathons", desc: "Building products under pressure and collaborating with teams"},
+            {title: "Future Vision", desc: "Software Engineering • Startups • Impactful Products" }
           ].map((card) => (
             <div
               key={card.title}

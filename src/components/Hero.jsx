@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 
 const skills = [
-  { label: "C++", x: "78%", y: "12%", delay: "0s" },
+  { label: "C++", x: "81%", y: "12%", delay: "0s" },
   { label: "React", x: "88%", y: "35%", delay: "0.4s" },
   { label: "Next.js", x: "62%", y: "8%", delay: "0.8s" },
   { label: "DSA", x: "92%", y: "58%", delay: "1.2s" },
@@ -28,6 +30,10 @@ const lines = [
   { text: "};", indent: 0, color: "#9CA3AF" },
 ];
 
+function openChatbot() {
+  window.dispatchEvent(new CustomEvent("open-chatbot"));
+}
+
 export default function Hero() {
   const cursorRef = useRef(null);
 
@@ -48,12 +54,55 @@ export default function Hero() {
         {/* LEFT — Text */}
         <div className="max-w-xl">
 
-          {/* Status pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="text-emerald-400 text-xs font-semibold tracking-widest uppercase">
-              Available for Internships
-            </span>
+          {/* Pills row */}
+          <div className="flex flex-wrap items-center gap-3 mb-8">
+
+            {/* Status pill — existing */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="text-emerald-400 text-xs font-semibold tracking-widest uppercase">
+                Available for Internships
+              </span>
+            </div>
+
+            {/* ── AI Chatbot Teaser Pill ── */}
+            <motion.button
+              onClick={openChatbot}
+              className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/25 cursor-pointer overflow-hidden group"
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8, type: "spring", stiffness: 200 }}
+              whileHover={{ scale: 1.06, borderColor: "rgba(245,166,35,0.6)" }}
+              whileTap={{ scale: 0.96 }}
+            >
+              {/* Shimmer sweep on hover */}
+              <motion.span
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/15 to-transparent pointer-events-none"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "100%" }}
+                transition={{ duration: 0.5 }}
+              />
+
+              {/* Pulsing glow ring */}
+              <motion.span
+                className="absolute inset-0 rounded-full bg-amber-500/10 pointer-events-none"
+                animate={{ scale: [1, 1.18, 1], opacity: [0.5, 0, 0.5] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut" }}
+              />
+
+              <motion.span
+                animate={{ rotate: [0, 15, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 2 }}
+                className="relative z-10"
+              >
+                <Sparkles size={13} className="text-amber-400" />
+              </motion.span>
+
+              <span className="text-amber-400 text-xs font-semibold tracking-wide relative z-10">
+                ✦ Ask AI about me
+              </span>
+            </motion.button>
+
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tight text-[#4B5563]">
