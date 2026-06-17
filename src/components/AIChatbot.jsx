@@ -316,7 +316,7 @@ export default function AIChatbot() {
                                     </motion.button>
                                 </div>
                                 <p className="text-center text-zinc-700 text-[10px] mt-2">
-                                    Powered by Groq AI · Answers based on Gourav's profile
+                                    More than a portfolio. A conversation.
                                 </p>
                             </div>
 

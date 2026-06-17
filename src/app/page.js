@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
 import FeaturedWork from "@/components/FeaturedWork";
 import CertificatesPreview from "@/components/CertificatesPreview";
 import Academics from "@/components/Academics";
@@ -19,6 +20,10 @@ export default function Home() {
 
       <Reveal>
         <About />
+      </Reveal>
+
+      <Reveal>
+        <Skills />
       </Reveal>
 
       <Reveal>
