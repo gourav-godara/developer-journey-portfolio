@@ -124,7 +124,7 @@ export default function FeaturedWorkPage() {
               </p>
 
               <div className="flex flex-wrap gap-2 mb-auto">
-                {["Next.js", "React", "Tailwind CSS"].map((t, i) => (
+                {["Next.js", "React", "Tailwind CSS", "Farmer Motion", "Node.js", "Groq API"].map((t, i) => (
                   <motion.span
                     key={t}
                     className="px-2.5 sm:px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-xs sm:text-sm text-[#9CA3AF]"
@@ -173,9 +173,8 @@ export default function FeaturedWorkPage() {
                 In Progress
               </motion.div>
               <motion.div
-                className="size-14 sm:size-16 rounded-xl bg-[#2A2A2A] flex items-center justify-center text-xl sm:text-2xl"
-                animate={{ rotate: [0, 15, -15, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                className="inline-flex px-4 py-4 relative size-14 sm:size-16 rounded-xl text-2xl overflow-hidden border border-[#333]"
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 ⚡
               </motion.div>
@@ -203,57 +202,56 @@ export default function FeaturedWorkPage() {
           </motion.div>
 
           {/* Card 3 — Hackathon */}
-          <Link href="/featured-work/hackathon">
-            <motion.div
-              className="group bg-[#161616] p-6 sm:p-8 rounded-3xl border border-[#2A2A2A] min-h-[19rem] sm:min-h-80 flex flex-col cursor-pointer"
-              initial="hidden"
-              animate="visible"
-              variants={cardVariants}
-              custom={2}
-              whileHover={{
-                y: -8,
-                borderColor: "rgba(245,166,35,0.5)",
-                boxShadow: "0 0 32px rgba(245,166,35,0.08)",
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="flex justify-between items-start mb-5 sm:mb-6">
-                <motion.div
-                  className="inline-flex px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-amber-500/10 text-amber-400 font-semibold text-xs sm:text-sm border border-amber-500/20"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  Upcoming
-                </motion.div>
-                <motion.div
-                  className="size-14 sm:size-16 rounded-xl bg-[#2A2A2A] flex items-center justify-center text-xl sm:text-2xl"
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  🏆
-                </motion.div>
-              </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400">
-                Hackathons &amp; Competitions
-              </h3>
-              <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed mb-5 sm:mb-6">
-                Preparing for hackathons, coding contests, and collaborative
-                engineering challenges to build practical experience and
-                strengthen problem solving skills.
-              </p>
+          <motion.div
+            className="group bg-[#161616] p-6 sm:p-8 rounded-3xl border border-[#2A2A2A] min-h-[19rem] sm:min-h-80 flex flex-col cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            custom={2}
+            whileHover={{
+              y: -8,
+              borderColor: "rgba(245,166,35,0.5)",
+              boxShadow: "0 0 32px rgba(245,166,35,0.08)",
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex justify-between items-start mb-5 sm:mb-6">
+              <motion.div
+                className="inline-flex px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-amber-500/10 text-amber-400 font-semibold text-xs sm:text-sm border border-amber-500/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                Upcoming
+              </motion.div>
+              <motion.div
+                className="inline-flex px-4 py-4 relative size-14 sm:size-16 rounded-xl text-2xl overflow-hidden border border-[#333]"
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              >
+                🏆
+              </motion.div>
+            </div>
 
-              <div className="flex flex-wrap gap-2 mb-auto">
-                <span className="px-2.5 sm:px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-xs sm:text-sm text-[#9CA3AF]"></span>
-                <span className="px-2.5 sm:px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-xs sm:text-sm text-[#9CA3AF]"></span>
-              </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400">
+              Hackathons &amp; Competitions
+            </h3>
+            <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed mb-5 sm:mb-6">
+              Preparing for hackathons, coding contests, and collaborative
+              engineering challenges to build practical experience and
+              strengthen problem solving skills.
+            </p>
 
-              <div className="flex justify-end pt-6 sm:pt-8">
-                <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-[#6B7280]">
-                  Updates Coming Soon
-                </span>
-              </div>
-            </motion.div>
-          </Link>
+            <div className="flex flex-wrap gap-2 mb-auto">
+              <span className="px-2.5 sm:px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-xs sm:text-sm text-[#9CA3AF]"></span>
+              <span className="px-2.5 sm:px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-xs sm:text-sm text-[#9CA3AF]"></span>
+            </div>
+
+            <div className="flex justify-end pt-6 sm:pt-8">
+              <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-[#6B7280]">
+                Updates Coming Soon
+              </span>
+            </div>
+          </motion.div>
+
 
         </div>
       </section>

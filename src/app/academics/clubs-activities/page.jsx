@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function ClubsActivities() {
@@ -153,38 +154,9 @@ export default function ClubsActivities() {
           </div>
         </div>
 
-        {/* ── Growth Skills Section ── */}
-        <div>
-          <p className="uppercase tracking-[0.3em] text-[#6B7280] font-semibold text-xs mb-4">
-            Building Through Experiences
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-10">
-            What I'm <span className="text-amber-400">Growing</span>
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { skill: "Teamwork", icon: "🤝" },
-              { skill: "Leadership", icon: "⚡" },
-              { skill: "Networking", icon: "🌐" },
-              { skill: "Communication", icon: "💬" },
-            ].map(({ skill, icon }) => (
-              <div
-                key={skill}
-                className="group bg-[#161616] border border-[#2A2A2A] rounded-2xl p-6 text-center
-                           hover:border-amber-500/40 hover:shadow-[0_0_20px_rgba(245,166,35,0.06)]
-                           transition-all duration-300 cursor-default"
-              >
-                <div className="text-3xl mb-3">{icon}</div>
-                <p className="text-white font-semibold group-hover:text-amber-400 transition-colors duration-300">
-                  {skill}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </section>
+
+      <Footer />
     </main>
   );
 }

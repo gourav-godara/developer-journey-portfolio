@@ -57,7 +57,7 @@ export default function Hero() {
           {/* Pills row */}
           <div className="flex flex-wrap items-center gap-3 mb-8">
 
-            {/* Status pill — existing */}
+            {/* Status pill */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               <span className="text-emerald-400 text-xs font-semibold tracking-widest uppercase">
@@ -65,7 +65,7 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* ── AI Chatbot Teaser Pill ── */}
+            {/* AI Chatbot Teaser Pill */}
             <motion.button
               onClick={openChatbot}
               className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/25 cursor-pointer overflow-hidden group"
@@ -75,21 +75,17 @@ export default function Hero() {
               whileHover={{ scale: 1.06, borderColor: "rgba(245,166,35,0.6)" }}
               whileTap={{ scale: 0.96 }}
             >
-              {/* Shimmer sweep on hover */}
               <motion.span
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/15 to-transparent pointer-events-none"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "100%" }}
                 transition={{ duration: 0.5 }}
               />
-
-              {/* Pulsing glow ring */}
               <motion.span
                 className="absolute inset-0 rounded-full bg-amber-500/10 pointer-events-none"
                 animate={{ scale: [1, 1.18, 1], opacity: [0.5, 0, 0.5] }}
                 transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut" }}
               />
-
               <motion.span
                 animate={{ rotate: [0, 15, -15, 0] }}
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 2 }}
@@ -97,7 +93,6 @@ export default function Hero() {
               >
                 <Sparkles size={13} className="text-amber-400" />
               </motion.span>
-
               <span className="text-amber-400 text-xs font-semibold tracking-wide relative z-10">
                 ✦ Ask AI about me
               </span>
@@ -121,6 +116,7 @@ export default function Hero() {
             frontend development, and real-world software engineering.
           </p>
 
+          {/* ── Buttons row ── */}
           <div className="flex flex-col sm:flex-row gap-3 mt-12">
             <Link
               href="/featured-work"
@@ -134,6 +130,15 @@ export default function Hero() {
             >
               Contact Me
             </Link>
+            
+            <a
+             href="/Gourav_Godara_Resume_1.docx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-7 py-3.5 border border-[#2A2A2A] text-white rounded-full hover:border-amber-500/50 hover:text-amber-400 transition-all duration-300 text-sm text-center"
+            >
+              Resume ↗
+            </a>
           </div>
 
         </div>
@@ -141,15 +146,12 @@ export default function Hero() {
         {/* RIGHT — Creative Visual */}
         <div className="relative hidden lg:flex items-center justify-center h-[480px]">
 
-          {/* Ambient glow */}
           <div className="absolute inset-0 rounded-3xl bg-amber-500/[0.03] blur-3xl pointer-events-none"></div>
 
-          {/* Grid dots background */}
           <div
             className="absolute inset-0 opacity-[0.07]"
             style={{
-              backgroundImage:
-                "radial-gradient(circle, #F5A623 1px, transparent 1px)",
+              backgroundImage: "radial-gradient(circle, #F5A623 1px, transparent 1px)",
               backgroundSize: "28px 28px",
             }}
           ></div>
@@ -157,7 +159,6 @@ export default function Hero() {
           {/* Code card */}
           <div className="relative w-[340px] bg-[#111111] border border-white/8 rounded-2xl overflow-hidden shadow-2xl shadow-black/60 z-10">
 
-            {/* Terminal header */}
             <div className="flex items-center gap-2 px-4 py-3 bg-[#1A1A1A] border-b border-white/5">
               <span className="w-3 h-3 rounded-full bg-red-500/70"></span>
               <span className="w-3 h-3 rounded-full bg-yellow-500/70"></span>
@@ -165,7 +166,6 @@ export default function Hero() {
               <span className="ml-3 text-xs text-zinc-500 font-mono">gourav.js</span>
             </div>
 
-            {/* Code lines */}
             <div className="px-5 py-5 font-mono text-sm leading-7 select-none">
               {lines.map((line, i) => (
                 <div
@@ -187,7 +187,6 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* Bottom bar */}
             <div className="px-5 py-3 bg-[#1A1A1A] border-t border-white/5 flex items-center justify-between">
               <span className="text-xs text-zinc-600 font-mono">JavaScript</span>
               <span className="flex items-center gap-1.5">
@@ -215,7 +214,6 @@ export default function Hero() {
             </div>
           ))}
 
-          {/* Connecting lines (decorative SVG) */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" style={{ opacity: 0.12 }}>
             <line x1="50%" y1="50%" x2="78%" y2="12%" stroke="#F5A623" strokeWidth="1" strokeDasharray="4 4" />
             <line x1="50%" y1="50%" x2="88%" y2="35%" stroke="#F5A623" strokeWidth="1" strokeDasharray="4 4" />

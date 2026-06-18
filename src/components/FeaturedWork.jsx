@@ -59,6 +59,10 @@ export default function FeaturedWork() {
                             <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]">Next.js</span>
                             <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]">React</span>
                             <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]">Tailwind CSS</span>
+                            <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]">Framer Motion</span>
+                            <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]">Node.js</span>
+                            <span className="px-3 py-1 bg-[#252525] border border-[#333] rounded-lg text-sm text-[#9CA3AF]">Groq API </span>
+
                         </div>
 
                         <div className="flex justify-end pt-8">

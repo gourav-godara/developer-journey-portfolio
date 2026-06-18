@@ -106,12 +106,23 @@ export default function PortfolioWebsitePage() {
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="w-full h-52 sm:h-72 md:h-96 bg-[#161616] border border-[#2A2A2A] rounded-2xl sm:rounded-3xl mb-10 sm:mb-16 flex items-center justify-center relative overflow-hidden"
+          className="w-full bg-[#161616] border border-[#2A2A2A] rounded-2xl sm:rounded-3xl mb-10 sm:mb-16 overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-amber-500/5"></div>
-          <div className="text-center relative z-10">
-            <p className="text-[#2A2A2A] text-4xl sm:text-6xl font-black">Preview</p>
-            <p className="text-[#333] text-xs sm:text-sm mt-2">Screenshot / Demo GIF</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#2A2A2A]">
+            <div className="relative w-full aspect-video bg-[#1A1A1A] overflow-hidden">
+              <img
+                src="/portfolio-project-screenshots/s1.jpeg"
+                alt="Portfolio Screenshot 1"
+                className="w-full h-full object-cover object-top hover:object-bottom transition-all duration-[3s] ease-in-out"
+              />
+            </div>
+            <div className="relative w-full aspect-video bg-[#1A1A1A] overflow-hidden">
+              <img
+                src="/portfolio-project-screenshots/s2.jpeg"
+                alt="Portfolio Screenshot 2"
+                className="w-full h-full object-cover object-top hover:object-bottom transition-all duration-[3s] ease-in-out"
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -134,7 +145,7 @@ export default function PortfolioWebsitePage() {
           >
             <p className="text-xs text-[#6B7280] uppercase tracking-widest mb-4">Tech Stack</p>
             <div className="flex flex-wrap gap-2">
-              {["Next.js", "React", "Tailwind CSS", "Node.js"].map((t) => (
+              {["Next.js", "React", "Tailwind CSS", "Framer Motion", "Node.js", "Groq API"].map((t) => (
                 <span key={t} className="px-3 py-1.5 bg-[#1C1C1C] border border-[#2A2A2A] rounded-lg text-xs sm:text-sm text-[#9CA3AF]">
                   {t}
                 </span>
@@ -146,7 +157,7 @@ export default function PortfolioWebsitePage() {
           <div className="md:col-span-2 grid grid-cols-3 gap-3 sm:gap-4">
             {[
               { num: "100%", label: "Responsive" },
-              { num: "Dark", label: "Craft UI" },
+              { num: "AI", label: "Chatbot" },
               { num: "2026", label: "Launched" },
             ].map(({ num, label }) => (
               <motion.div
@@ -156,7 +167,7 @@ export default function PortfolioWebsitePage() {
                 className="bg-[#161616] border border-[#2A2A2A] rounded-2xl p-4 sm:p-6 flex flex-col justify-between"
               >
                 <p className="text-2xl sm:text-4xl font-black text-white">{num}</p>
-                <p className="text-[10px] sm:text-xs text-[#6B7280] uppercase tracking-widest mt-2">{label}</p>
+                <p className="text-[10px] text-[#6B7280] uppercase tracking-widest mt-2">{label}</p>
               </motion.div>
             ))}
           </div>
@@ -181,9 +192,10 @@ export default function PortfolioWebsitePage() {
             <p className="text-xs text-[#6B7280] uppercase tracking-widest mb-4">About</p>
             <h3 className="text-lg sm:text-xl font-bold text-white mb-4">What is this project?</h3>
             <p className="text-[#6B7280] leading-relaxed text-sm sm:text-base">
-              This is my personal portfolio website, designed and built from scratch to showcase
-              my projects, academic journey, certifications, and skills. It's fully responsive,
-              accessible, and crafted with a dark-first design philosophy using the Dark Craft aesthetic.
+              Designed and developed a personal portfolio website from scratch to present projects,
+              technical skills, certifications, and academic achievements. Implemented a custom AI assistant
+              using the Groq API to provide instant information about my experience and work, complemented by
+              modern animations and a premium responsive interface.
             </p>
           </motion.div>
 
@@ -200,6 +212,8 @@ export default function PortfolioWebsitePage() {
                 "Responsive layout with Tailwind CSS",
                 "Component-driven architecture with React",
                 "Dark theme design system from scratch",
+                "AI chatbot using Groq API with custom system prompt",
+                "Framer Motion animations and page transitions",
               ].map((item, i) => (
                 <motion.li
                   key={item}
@@ -235,7 +249,7 @@ export default function PortfolioWebsitePage() {
 
           <div className="flex gap-3 sm:gap-4 relative z-10 shrink-0 w-full sm:w-auto">
             <a
-              href="https://github.com/gourav-godara"
+              href="https://github.com/gourav-godara/developer-journey-portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none text-center px-5 sm:px-6 py-3 bg-[#1C1C1C] border border-[#2A2A2A] text-white rounded-xl font-semibold hover:border-amber-500/40 hover:text-amber-400 transition-all duration-200 text-sm"
