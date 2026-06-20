@@ -9,7 +9,7 @@ const SUGGESTED_QUESTIONS = [
     "Is Gourav available for internships?",
     "What tech stack does he know?",
     "Tell me about his projects",
-    "How can I contact him?",
+    "If bugs could review Gourav, what would they say?",
 ];
 
 function TypingIndicator() {
@@ -45,6 +45,69 @@ function RedirectPill({ redirect, onNavigate }) {
     );
 }
 
+function FloatingButton({ onClick }) {
+    const [phase, setPhase] = useState("hidden");
+    // phases: hidden → circle → expanded → circle
+
+    useEffect(() => {
+        const t1 = setTimeout(() => setPhase("circle"), 500);   // appear as circle
+        const t2 = setTimeout(() => setPhase("expanded"), 2000); // expand with name
+        const t3 = setTimeout(() => setPhase("circle"), 5000);   // collapse back
+        return () => {
+            clearTimeout(t1);
+            clearTimeout(t2);
+            clearTimeout(t3);
+        };
+    }, []);
+
+    if (phase === "hidden") return null;
+
+    return (
+        <motion.button
+            onClick={onClick}
+            className="fixed bottom-6 right-6 z-50 flex items-center justify-center bg-amber-500 text-[#0A0A0A] font-bold text-sm shadow-[0_8px_30px_rgba(245,166,35,0.35)] hover:bg-amber-400 transition-colors duration-200"
+            initial={{ scale: 0, opacity: 0, borderRadius: "50%", width: 48, height: 48 }}
+            animate={{
+                scale: 1,
+                opacity: 1,
+                borderRadius: phase === "expanded" ? "14px" : "50%",
+                width: phase === "expanded" ? 190 : 48,
+                height: 48,
+            }}
+            transition={{
+                width: { delay: phase === "expanded" ? 0 : 0.2, type: "spring", stiffness: 200, damping: 22 },
+                borderRadius: { delay: phase === "expanded" ? 0 : 0.2, duration: 0.3 },
+                scale: { type: "spring", stiffness: 200, damping: 22 },
+                opacity: { duration: 0.2 },
+            }}
+            whileTap={{ scale: 0.95 }}
+        >
+            <div className="flex items-center gap-2 px-3">
+                <Sparkles size={17} className="shrink-0" />
+                <AnimatePresence>
+                    {phase === "expanded" && (
+                        <motion.span
+                            key="label"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{
+                                opacity: {
+                                    duration: 0.15,
+                                    delay: phase === "expanded" ? 0.2 : 0
+                                }
+                            }}
+                            className="whitespace-nowrap text-sm font-bold"
+                        >
+                            Ask about Gourav
+                        </motion.span>
+                    )}
+                </AnimatePresence>
+            </div>
+        </motion.button>
+    );
+}
+
 export default function AIChatbot() {
     const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +125,6 @@ export default function AIChatbot() {
     const bottomRef = useRef(null);
     const inputRef = useRef(null);
 
-    // ── Listen for open-chatbot event fired from Hero pill ─────────────────
     useEffect(() => {
         const handler = () => setIsOpen(true);
         window.addEventListener("open-chatbot", handler);
@@ -74,9 +136,7 @@ export default function AIChatbot() {
     }, [messages, isLoading]);
 
     useEffect(() => {
-        if (isOpen) {
-            setTimeout(() => inputRef.current?.focus(), 300);
-        }
+        if (isOpen) setTimeout(() => inputRef.current?.focus(), 300);
     }, [isOpen]);
 
     function handleNavigate(route) {
@@ -151,29 +211,8 @@ export default function AIChatbot() {
 
     return (
         <>
-            {/* Floating Button */}
-            <motion.button
-                onClick={() => setIsOpen(true)}
-                className={`fixed bottom-6 right-6 z-50 items-center gap-2.5 px-5 py-3.5 rounded-2xl bg-amber-500 text-[#0A0A0A] font-bold text-sm shadow-[0_8px_30px_rgba(245,166,35,0.35)] hover:bg-amber-400 transition-colors duration-300 ${isOpen ? "hidden" : "flex"}`}
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 260, damping: 20, delay: 1 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-            >
-                <motion.span
-                    className="absolute inset-0 rounded-2xl bg-amber-500/25 pointer-events-none"
-                    animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0, 0.5] }}
-                    transition={{ duration: 2.5, repeat: 2, repeatDelay: 0, ease: "easeOut" }}
-                />
-                <motion.span
-                    animate={{ rotate: [0, 15, -15, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                >
-                    <Sparkles size={16} />
-                </motion.span>
-                Ask about Gourav
-            </motion.button>
+            {/* Floating Button — hidden when chat is open */}
+            {!isOpen && <FloatingButton onClick={() => setIsOpen(true)} />}
 
             {/* Chat Window */}
             <AnimatePresence>
@@ -190,7 +229,7 @@ export default function AIChatbot() {
 
                         <motion.div
                             className="fixed bottom-6 right-3 sm:right-6 z-50 w-[calc(100vw-1.5rem)] sm:w-[400px] h-[580px] flex flex-col bg-[#111111] border border-[#2A2A2A] rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.7)] overflow-hidden"
-                            initial={{ opacity: 0, scale: 0.92, y: 20, originX: 1, originY: 1 }}
+                            initial={{ opacity: 0, scale: 0.92, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.92, y: 20 }}
                             transition={{ type: "spring", stiffness: 300, damping: 28 }}
@@ -247,12 +286,8 @@ export default function AIChatbot() {
                                                 {msg.content}
                                             </div>
 
-                                            {/* Redirect pill */}
                                             {msg.role === "assistant" && msg.redirect && (
-                                                <RedirectPill
-                                                    redirect={msg.redirect}
-                                                    onNavigate={handleNavigate}
-                                                />
+                                                <RedirectPill redirect={msg.redirect} onNavigate={handleNavigate} />
                                             )}
                                         </motion.div>
                                     ))}
@@ -319,7 +354,6 @@ export default function AIChatbot() {
                                     More than a portfolio. A conversation.
                                 </p>
                             </div>
-
                         </motion.div>
                     </>
                 )}
