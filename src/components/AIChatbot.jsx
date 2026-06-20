@@ -81,6 +81,11 @@ function FloatingButton({ onClick }) {
                 opacity: { duration: 0.2 },
             }}
             whileTap={{ scale: 0.95 }}
+            onMouseEnter={() => setPhase("expanded")}
+            onMouseLeave={() => {
+                const t = setTimeout(() => setPhase("circle"), 150);
+                return () => clearTimeout(t);
+            }}
         >
             <div className="flex items-center gap-2 px-3">
                 <Sparkles size={17} className="shrink-0" />
