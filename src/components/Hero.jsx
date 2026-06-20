@@ -132,7 +132,7 @@ export default function Hero() {
             </Link>
             
             <a
-             href="/gourav-godara-resume-for-online.pdf"
+             href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-3.5 border border-[#2A2A2A] text-white rounded-full hover:border-amber-500/50 hover:text-amber-400 transition-all duration-300 text-sm text-center"
