@@ -23,7 +23,7 @@ export const metadata = {
 
   // Open Graph — WhatsApp, LinkedIn, Facebook, Discord
   openGraph: {
-    title: "Gourav Godara — CSE Student",
+    title: "Gourav Godara — Portfolio",
     description:
       "B.Tech CSE @ SVNIT Surat · Next.js · React · DSA · Open to internships in Software Dev, AI & Cybersecurity.",
     url: BASE_URL,
@@ -43,7 +43,7 @@ export const metadata = {
   // Twitter / X
   twitter: {
     card: "summary_large_image",
-    title: "Gourav Godara — CSE Student",
+    title: "Gourav Godara — Portfolio",
     description:
       "B.Tech CSE @ SVNIT Surat · Next.js · React · DSA · Open to internships.",
     images: [`${BASE_URL}/portfolio-logo.jpeg`],
