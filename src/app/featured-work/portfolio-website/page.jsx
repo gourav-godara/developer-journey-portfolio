@@ -239,7 +239,7 @@ export default function PortfolioWebsitePage() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="bg-[#161616] border border-[#2A2A2A] rounded-2xl sm:rounded-3xl p-7 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative overflow-hidden"
         >
-          <div className="absolute -top-16 -right-16 w-64 h-64 bg-amber-500 rounded-full blur-3xl opacity-[0.04] pointer-events-none"></div>
+          <div className="absolute -top-16 -right-16 w-64 h-64 bg-amber-500 rounded-full blur-3xl opacity-[0.04] pointer-events-none [transform:translateZ(0)]"></div>
 
           <div className="relative z-10">
             <p className="text-xs text-[#6B7280] uppercase tracking-widest mb-2">View Live</p>
@@ -257,7 +257,7 @@ export default function PortfolioWebsitePage() {
               GitHub →
             </a>
             <a
-              href="/"
+              href="https://gouravgodara.vercel.app/"
               className="flex-1 sm:flex-none text-center px-5 sm:px-6 py-3 bg-amber-500 text-[#0F0F0F] rounded-xl font-bold hover:bg-amber-400 transition-all duration-200 text-sm shadow-lg shadow-amber-500/20"
             >
               Live Site →

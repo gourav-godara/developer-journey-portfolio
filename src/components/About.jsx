@@ -2,9 +2,9 @@
 
 export default function About() {
   return (
-    <section className="max-w-7xl mx-auto px-8 py-28">
+    <section className="max-w-7xl mx-auto px-8 py-20">
       {/* Premium Divider */}
-      <div className="relative mb-20">
+      <div className="relative mt-0 mb-20">
         <div className="h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"></div>
         <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 rounded-full bg-[#0F0F0F] border-2 border-amber-500/60"></div>
       </div>

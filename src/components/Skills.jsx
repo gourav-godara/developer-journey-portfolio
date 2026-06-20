@@ -92,7 +92,7 @@ function SkillBar({ name, level, note, color, index }) {
 
 export default function Skills() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-8 py-24 sm:py-32">
+    <section className="max-w-7xl mx-auto pt-0 px-4 py-15">
 
       {/* Divider */}
       <div className="relative mb-16 sm:mb-20">

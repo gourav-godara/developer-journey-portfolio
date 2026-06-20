@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CertificatesPreview() {
     return (
-        <section className="max-w-7xl mx-auto px-8 py-28">
+        <section className="max-w-7xl mx-auto px-8 py-15">
 
             {/* Premium Divider */}
             <div className="relative mb-20">

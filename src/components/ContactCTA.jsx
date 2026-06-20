@@ -12,7 +12,7 @@ export default function ContactCTA() {
                 <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 rounded-full bg-[#0F0F0F] border-2 border-amber-500/60"></div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[40px] bg-[#161616] border border-[#2A2A2A] p-12 md:p-20 text-center">
+           <div className="relative overflow-hidden rounded-[40px] bg-[#161616] border border-[#2A2A2A] p-12 md:p-20 text-center [transform:translateZ(0)] [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
 
                 {/* Background word watermark */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
@@ -23,7 +23,7 @@ export default function ContactCTA() {
 
                 {/* Amber glow top-left, purple glow bottom-right */}
                 <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber-500 rounded-full blur-3xl opacity-[0.06] pointer-events-none"></div>
-                <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-[0.07] pointer-events-none"></div>
+                <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-[0.07]  pointer-events-none"></div>
 
                 {/* Content */}
                 <div className="relative z-10">

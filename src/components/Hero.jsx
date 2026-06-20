@@ -48,7 +48,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto px-8 py-28 mb-10">
+    <section className="max-w-7xl mx-auto px-8 py-28 ">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT — Text */}
