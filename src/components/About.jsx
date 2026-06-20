@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+"use client";
 
 export default function About() {
   return (

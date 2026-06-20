@@ -1,11 +1,13 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Academics() {
     return (
-        <section className="max-w-7xl mx-auto px-8 py-28">
+        <section className="max-w-7xl mx-auto px-8 py-20">
 
             {/* Premium Divider */}
-            <div className="relative mb-20">
+            <div className="relative mb-12">
                 <div className="h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"></div>
                 <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 rounded-full bg-[#0F0F0F] border-2 border-amber-500/60"></div>
             </div>
@@ -23,7 +25,7 @@ export default function Academics() {
 
                 {/* Card 1 — Education */}
                 <Link href="/academics/education">
-                    <div className="group bg-[#1C1C1C] p-8 rounded-3xl border border-[#2A2A2A] min-h-24
+                    <div className="group bg-[#1C1C1C] p-8 rounded-3xl border border-[#2A2A2A] flex flex-col h-full
                                     hover:-translate-y-2 hover:border-amber-500/50 hover:shadow-[0_0_28px_rgba(245,166,35,0.07)]
                                     transition-all duration-300 cursor-pointer">
 
@@ -32,7 +34,7 @@ export default function Academics() {
                         </h3>
 
                         <p className="text-[#6B7280] leading-relaxed mb-6">
-                            My educational background, academic performance, and milestones from school to university.
+                            Academic journey from school to SVNIT Surat, including coursework, achievements, and growth as a Computer Science student.
                         </p>
 
                         <div className="mt-auto flex justify-end">
@@ -46,7 +48,7 @@ export default function Academics() {
 
                 {/* Card 2 — Clubs & Activities */}
                 <Link href="/academics/clubs-activities">
-                    <div className="group bg-[#1C1C1C] p-8 rounded-3xl border border-[#2A2A2A] min-h-24
+                    <div className="group bg-[#1C1C1C] p-8 rounded-3xl border border-[#2A2A2A] flex flex-col h-full
                                     hover:-translate-y-2 hover:border-amber-500/50 hover:shadow-[0_0_28px_rgba(245,166,35,0.07)]
                                     transition-all duration-300 cursor-pointer">
 
@@ -55,7 +57,7 @@ export default function Academics() {
                         </h3>
 
                         <p className="text-[#6B7280] leading-relaxed mb-6">
-                            Technical communities, student organizations, extracurricular involvement and experiences that helped me grow beyond the classroom.
+                            Hackathons, workshops, coding communities, and campus activities that contributed to my technical and personal development.
                         </p>
 
                         <div className="mt-auto flex justify-end">
