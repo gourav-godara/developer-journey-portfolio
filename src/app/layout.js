@@ -17,7 +17,7 @@ const BASE_URL = "https://gouravgodara.vercel.app";
 
 export const metadata = {
   
-  title: "Gourav Godara — CSE Student & Frontend Developer",
+  title: "Gourav Godara — Portfolio ",
   description:
     "Portfolio of Gourav Godara, a B.Tech CSE student at SVNIT Surat. Building modern web experiences with Next.js, React, and Tailwind CSS while mastering DSA and competitive programming.",
 
