@@ -12,12 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ── Replace YOUR_PORTFOLIO_URL once deployed ──
-// Example: https://gouravgodara.vercel.app
-const BASE_URL = "https://YOUR_PORTFOLIO_URL.com";
+
+const BASE_URL = "https://gouravgodara.vercel.app";
 
 export const metadata = {
-  // Basic
+  
   title: "Gourav Godara — CSE Student & Frontend Developer",
   description:
     "Portfolio of Gourav Godara, a B.Tech CSE student at SVNIT Surat. Building modern web experiences with Next.js, React, and Tailwind CSS while mastering DSA and competitive programming.",
